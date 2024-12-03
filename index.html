@@ -1,77 +1,86 @@
+
+19:59
+Vous avez envoyé
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nom Prénom</title>
+    <title>Questionnaire HTML Complet</title>
 </head>
 <body>
-    <!-- Titre principal -->
-    <h1>Page personnelle de Nom Prénom</h1>
+    <h1>Questionnaire</h1>
+    <form action="submit_form.php" method="POST">
+        <!-- Champ de texte -->
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
 
-    <!-- Informations de contact -->
-    <h2>Informations de contact</h2>
-    <ul>
-        <li>Nom : Chemani</li>
-        <li>Prénom : Islem Abderrhamane</li>
-        <li>Ville de résidence : Blida</li>
-        <li>Email : ischemani_etd@esgen.edu.dz</li>
-        <li>Numéro de téléphone : +213 797282324</li>
-    </ul>
+        <!-- Champ de mot de passe -->
+        <label for="motdepasse">Mot de passe :</label>
+        <input type="password" id="motdepasse" name="motdepasse" required><br><br>
 
-    <!-- Description -->
-    <p>
-        Actuellement étudiant(e) en premiere année master de spécialité E-business à l'école superiere de la gestion et d'economie numerique à Kolea, 
-        je suis à la recherche d'un stage de un moi dans le cadre de ma formation. Mon objectif est de développer mes compétences dans le Marketing.
-    </p>
+        <!-- Champ e-mail -->
+        <label for="email">E-mail :</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-    <!-- Photo -->
-    <img src="img.JPG" alt="Photo de Nom Prénom" style="width:200px; height:auto;">
+        <!-- Champ de date -->
+        <label for="date">Date de naissance :</label>
+        <input type="date" id="date" name="date"><br><br>
 
-    <!-- Liens vers les sections -->
-    <h2>Navigation</h2>
-    <ol>
-        <li><a href="#formation">Formation</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#interets">Centres d'intérêts</a></li>
-        <li><a href="#infos">Plus d'informations</a></li>
-    </ol>
+        <!-- Champ de nombre -->
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age" min="1" max="120"><br><br>
 
-    <!-- Formation -->
-    <h2 id="formation">Formation</h2>
-    <ul>
-        <li>2023 - 2022 : access certeficate to major business school</li>
-        <li>2022 - 2021 : gestion des pages commerciales en ligne </li>
-        <li>2020 - 2021 : Baccalauréat mathecnique à Kritli Mokhtar</li>
-    </ul>
+        <!-- Champ de téléphone -->
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone"><br><br>
 
-    <!-- Langues -->
-    <h2>Langues</h2>
-    <ul>
-        <li>Français : Langue maternelle</li>
-        <li>Anglais : Avancé</li>
-    </ul>
+        <!-- Menu déroulant -->
+        <label for="pays">Pays :</label>
+        <select id="pays" name="pays">
+            <option value="france">France</option>
+            <option value="belgique">Belgique</option>
+            <option value="suisse">Suisse</option>
+            <option value="canada">Canada</option>
+        </select><br><br>
 
-    <!-- Centres d'intérêt -->
-    <h2 id="interets">Centres d'intérêt</h2>
-    <ul>
-        <li>Sport : Football, Musculation</li>
-        <li>Lecture</li>
-        <li>Voyages</li>
-    </ul>
+        <!-- Boutons radio -->
+        <label>Genre :</label>
+        <input type="radio" id="homme" name="genre" value="homme">
+        <label for="homme">Homme</label>
+        <input type="radio" id="femme" name="genre" value="femme">
+        <label for="femme">Femme</label><br><br>
 
-    <!-- Compétences -->
-    <h2 id="competences">Compétences</h2>
-    <ol>
-        <li>Suite Microsoft Office : Excel, Word</li>
-        <li>Facebook Ads</li>
-        <li>Développement web : HTML, CSS</li>
-    </ol>
+        <!-- Cases à cocher -->
+        <label>Langues parlées :</label>
+        <input type="checkbox" id="francais" name="langues" value="francais">
+        <label for="francais">Français</label>
+        <input type="checkbox" id="anglais" name="langues" value="anglais">
+        <label for="anglais">Anglais</label>
+        <input type="checkbox" id="espagnol" name="langues" value="espagnol">
+        <label for="espagnol">Espagnol</label><br><br>
 
-    <!-- Lien vers infosup.html -->
-    <h2 id="infos">Plus d'informations</h2>
-    <p>
-        Pour plus d'informations, cliquez <a href="infosup.html">ici</a>.
-    </p>
+        <!-- Champ de texte long -->
+        <label for="commentaires">Commentaires :</label><br>
+        <textarea id="commentaires" name="commentaires" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Fichier -->
+        <label for="fichier">Télécharger un fichier :</label>
+        <input type="file" id="fichier" name="fichier"><br><br>
+
+        <!-- Champ de couleur -->
+        <label for="couleur">Choisissez une couleur :</label>
+        <input type="color" id="couleur" name="couleur"><br><br>
+
+        <!-- Champ de plage -->
+        <label for="satisfaction">Niveau de satisfaction :</label>
+        <input type="range" id="satisfaction" name="satisfaction" min="0" max="10"><br><br>
+
+        <!-- Bouton de soumission -->
+        <input type="submit" value="Envoyer">
+
+        <!-- Bouton de réinitialisation -->
+        <input type="reset" value="Réinitialiser">
+    </form>
 </body>
 </html>
